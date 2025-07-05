@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     namespace "org.evilbinary.tv.lib"
@@ -15,6 +16,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
     android {
@@ -29,10 +38,22 @@ dependencies {
 //    compile 'com.android.support:appcompat-v7:22.+'
 //    compile 'com.android.support:cardview-v7:22+'
 //    compile 'com.android.support:recyclerview-v7:22+'
-    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.13.2'
-    compileOnly("androidx.cardview:cardview:1.0.0")
-    compileOnly("androidx.appcompat:appcompat:1.4.0")
-    compileOnly 'androidx.recyclerview:recyclerview:1.2.0'
-    compileOnly('androidx.gridlayout:gridlayout:1.0.0')
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation('androidx.gridlayout:gridlayout:1.0.0')
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.xyhuangjia'
+                artifactId = 'forked-tv-widget'
+                version = '1.0.0'  // 自定义版本
+            }
+        }
+    }
 }
