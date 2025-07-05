@@ -20,7 +20,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
         BorderView border = new BorderView(this);
-        border.setBackgroundResource(R.drawable.border_highlight);
+        border.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_highlight);
 
         main = (RelativeLayout) findViewById(R.id.main);
         border.attachTo(main);

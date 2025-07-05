@@ -6,13 +6,14 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.evilbinary.tv.widget.BorderView.Effect;
 
@@ -39,7 +40,7 @@ public class BorderEffect implements Effect {
     protected List<Animator> mAnimatorList = new ArrayList<Animator>();
     protected View mTarget;
 
-    protected boolean mEnableTouch=true;
+    protected boolean mEnableTouch = true;
 
     public BorderEffect() {
 
@@ -86,7 +87,7 @@ public class BorderEffect implements Effect {
                     mTarget.setVisibility(View.VISIBLE);
                 }
                 animatorSet.start();
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
@@ -206,7 +207,7 @@ public class BorderEffect implements Effect {
     protected List<Animator> getScaleAnimator(View view, boolean isScale) {
 
         List<Animator> animatorList = new ArrayList<Animator>(2);
-        if(!mScalable) return animatorList;
+        if (!mScalable) return animatorList;
         try {
             float scaleBefore = 1.0f;
             float scaleAfter = mScale;
@@ -218,7 +219,7 @@ public class BorderEffect implements Effect {
             ObjectAnimator scaleY = new ObjectAnimator().ofFloat(view, "scaleY", scaleBefore, scaleAfter);
             animatorList.add(scaleX);
             animatorList.add(scaleY);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return animatorList;
@@ -452,7 +453,7 @@ public class BorderEffect implements Effect {
     public void onTouchModeChanged(View target, View attachView, boolean isInTouchMode) {
         try {
             //Log.d(TAG, "onTouchModeChanged:"+isInTouchMode);
-            if (mEnableTouch&&isInTouchMode) {
+            if (mEnableTouch && isInTouchMode) {
                 target.setVisibility(View.INVISIBLE);
                 if (lastFocus != null) {
                     AnimatorSet animatorSet = new AnimatorSet();
@@ -608,7 +609,7 @@ public class BorderEffect implements Effect {
 
 
                 oldFocus = newFocus;
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
 
@@ -638,9 +639,10 @@ public class BorderEffect implements Effect {
         return (T) this;
     }
 
-    public void setEnableTouch(boolean enableTouch){
-        this.mEnableTouch=enableTouch;
+    public void setEnableTouch(boolean enableTouch) {
+        this.mEnableTouch = enableTouch;
     }
+
     public boolean isScalable() {
         return mScalable;
     }

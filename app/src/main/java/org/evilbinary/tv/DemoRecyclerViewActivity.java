@@ -2,9 +2,9 @@ package org.evilbinary.tv;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.evilbinary.tv.widget.BorderView;
 import org.evilbinary.tv.widget.TvGridLayoutManagerScrolling;
@@ -23,7 +23,7 @@ public class DemoRecyclerViewActivity extends Activity {
         setContentView(R.layout.demo_recycler_view);
 
         border = new BorderView(this);
-        border.setBackgroundResource(R.drawable.border_highlight);
+        border.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_highlight);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle == null || bundle.containsKey("linerLayout")) {

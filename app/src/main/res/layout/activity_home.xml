@@ -58,7 +58,7 @@
                     />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:tag="top"
 
                     android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                     android:src="@drawable/g3" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -204,7 +204,7 @@
                     android:src="@drawable/demo1" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -251,7 +251,7 @@
                     android:src="@drawable/g5" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -298,7 +298,7 @@
                     android:src="@drawable/g2" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -345,7 +345,7 @@
                     android:src="@drawable/g5" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -392,7 +392,7 @@
                     android:src="@drawable/g5" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -439,7 +439,7 @@
                     android:src="@drawable/g5" />
 
 
-                <com.flyco.labelview.LabelView
+                <org.evilbinary.tv.LabelView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"

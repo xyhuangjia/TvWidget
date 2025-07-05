@@ -11,13 +11,13 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.HorizontalScrollView;
 
-import evilbinary.org.lib.R;
+import org.evilbinary.tv.lib.R;
 
 
 public class TvHorizontalScrollView extends HorizontalScrollView {
     final String TAG = "SmoothHorizontalScrollView";
 
-    int fadingEdge ;
+    int fadingEdge;
 
     public TvHorizontalScrollView(Context context) {
         this(context, null, 0);
@@ -29,11 +29,11 @@ public class TvHorizontalScrollView extends HorizontalScrollView {
     }
 
     public TvHorizontalScrollView(Context context, AttributeSet attrs,
-                                      int defStyle) {
+                                  int defStyle) {
         super(context, attrs, defStyle);
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TvHorizontalScrollView);
-        fadingEdge = a.getInt(R.styleable.TvHorizontalScrollView_fadingEdge,100);
+        fadingEdge = a.getInt(R.styleable.TvHorizontalScrollView_fadingEdge, 100);
 
         a.recycle();
     }

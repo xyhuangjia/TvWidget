@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.TextView;
 
+import org.evilbinary.tv.lib.R;
 import org.evilbinary.tv.util.AnimateFactory;
 
-import evilbinary.org.lib.R;
 
 /**
  * 作者：evilbinary on 2015/12/10 17:09

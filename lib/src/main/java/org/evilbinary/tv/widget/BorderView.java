@@ -65,9 +65,10 @@ public class BorderView<X extends View> implements ViewTreeObserver.OnGlobalFocu
         this.mView = view;
         borderEffect = new BorderEffect();
     }
-    public BorderView(X view,Effect effect) {
+
+    public BorderView(X view, Effect effect) {
         this.mView = view;
-        borderEffect =effect;
+        borderEffect = effect;
     }
 
     public BorderView(Context context, int resId) {

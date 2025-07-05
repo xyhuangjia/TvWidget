@@ -30,12 +30,12 @@ public class TvZorderRelativeLayout extends RelativeLayout {
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-            View focused = findFocus();
-            int pos = indexOfChild(focused);
-            if (pos >= 0 && pos < getChildCount()) {
-                setCurrentPosition(pos);
-                postInvalidate();
-            }
+        View focused = findFocus();
+        int pos = indexOfChild(focused);
+        if (pos >= 0 && pos < getChildCount()) {
+            setCurrentPosition(pos);
+            postInvalidate();
+        }
 
         return super.dispatchKeyEvent(event);
     }

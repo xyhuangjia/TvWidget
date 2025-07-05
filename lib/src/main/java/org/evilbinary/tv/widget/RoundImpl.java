@@ -12,7 +12,8 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
-import evilbinary.org.lib.R;
+import org.evilbinary.tv.lib.R;
+
 
 /**
  * 作者:evilbinary on 3/20/16.
@@ -172,7 +173,7 @@ public class RoundImpl {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
                 bitmap.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
-        int count = canvas.save(Canvas.ALL_SAVE_FLAG);
+        int count = canvas.save();
         final Paint paint = new Paint();
         final RectF rectF = new RectF(0, 0, bitmap.getWidth(), bitmap.getHeight());
         paint.setAntiAlias(true);

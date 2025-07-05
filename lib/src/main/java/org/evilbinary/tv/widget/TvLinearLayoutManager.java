@@ -1,10 +1,11 @@
 package org.evilbinary.tv.widget;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * 作者:evilbinary on 1/31/16.
@@ -13,7 +14,7 @@ import android.view.View;
 
 public class TvLinearLayoutManager extends LinearLayoutManager {
 
-    private static String TAG="TvLinearLayoutManager";
+    private static String TAG = "TvLinearLayoutManager";
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -24,11 +25,13 @@ public class TvLinearLayoutManager extends LinearLayoutManager {
             mCursor = (View) itemView;
 
         }
-        public View getCursor(){
+
+        public View getCursor() {
             return mCursor;
         }
 
     }
+
     ViewHolder mCursorViewHolder;
 
     public TvLinearLayoutManager(Context context) {
@@ -46,7 +49,7 @@ public class TvLinearLayoutManager extends LinearLayoutManager {
 
     @Override
     public boolean onRequestChildFocus(RecyclerView parent, RecyclerView.State state, View child, View focused) {
-        Log.d(TAG, "onRequestChildFocus:"+parent.getChildCount());
+        Log.d(TAG, "onRequestChildFocus:" + parent.getChildCount());
         //focused.setBackgroundColor(Color.BLUE);
 
 //        View cursor=mCursorViewHolder.mCursor;

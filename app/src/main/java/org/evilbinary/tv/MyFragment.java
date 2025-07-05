@@ -2,7 +2,7 @@ package org.evilbinary.tv;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,12 +45,12 @@ public class MyFragment extends Fragment {
         //gridView.setFocusable(false);
 
         BorderView borderView = new BorderView(getActivity());
-        borderView.setBackgroundResource(R.drawable.border_white_light_10);
+        borderView.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_white_light_10);
         //borderView.getEffect(BorderEffect.class).setMargin(12);
         borderView.attachTo((ViewGroup) mView);
 
         BorderView borderView2 = new BorderView(getActivity());
-        borderView2.setBackgroundResource(R.drawable.border_white_light_10);
+        borderView2.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_white_light_10);
         //borderView2.getEffect(BorderEffect.class).setMargin(12);
         borderView2.attachTo((ViewGroup) gridView);
 

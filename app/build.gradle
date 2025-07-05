@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.2"
+    namespace "org.evilbinary.tv"
+    compileSdkVersion 33
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId "evilbinary.org.tvwidget"
-        minSdkVersion 14
-        targetSdkVersion 19
+        minSdkVersion 19
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -20,9 +21,15 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:22.+'
-    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
-    compile project(':lib')
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:appcompat-v7:22.+'
+//    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+//    compile project(':lib')
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation project(':lib')
 }

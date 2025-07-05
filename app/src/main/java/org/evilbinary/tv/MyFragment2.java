@@ -2,7 +2,7 @@ package org.evilbinary.tv;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +23,7 @@ public class MyFragment2 extends Fragment {
 
 
         BorderView borderView = new BorderView(getActivity());
-        borderView.setBackgroundResource(R.drawable.border_highlight);
+        borderView.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_highlight);
         borderView.attachTo((ViewGroup) mView);
 
         return mView;

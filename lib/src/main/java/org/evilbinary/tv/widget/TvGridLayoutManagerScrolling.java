@@ -1,10 +1,13 @@
 package org.evilbinary.tv.widget;
 
 import android.content.Context;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+;
 
 /**
  * 作者:evilbinary on 3/27/16.

@@ -42,19 +42,20 @@ public class AnimateFactory {
     }
 
     public static void zoomInView(View v, float zoomSize) {
-        zoomInView(v,zoomSize,200);
+        zoomInView(v, zoomSize, 200);
     }
 
     public static void zoomOutView(View v, float zoomSize) {
-        zoomOutView(v,zoomSize,200);
+        zoomOutView(v, zoomSize, 200);
     }
-    public static void zoomInView(View v, float zoomSize,long duration) {
+
+    public static void zoomInView(View v, float zoomSize, long duration) {
         if (v != null) {
-            v.startAnimation(AnimateFactory.zoomAnimation(1.0f, zoomSize,duration));
+            v.startAnimation(AnimateFactory.zoomAnimation(1.0f, zoomSize, duration));
         }
     }
 
-    public static void zoomOutView(View v, float zoomSize,long duration) {
+    public static void zoomOutView(View v, float zoomSize, long duration) {
         if (v != null) {
             v.startAnimation(AnimateFactory.zoomAnimation(zoomSize, 1.0f, duration));
         }

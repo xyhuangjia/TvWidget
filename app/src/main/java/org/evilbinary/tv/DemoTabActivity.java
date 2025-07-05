@@ -2,13 +2,16 @@ package org.evilbinary.tv;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabWidget;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import org.evilbinary.tv.R;
 
 import org.evilbinary.tv.widget.BorderView;
 
@@ -51,12 +54,12 @@ public class DemoTabActivity extends Activity {
 
         BorderView borderView = new BorderView(this);
 
-        borderView.setBackgroundResource(R.drawable.border_highlight);
+        borderView.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_highlight);
         borderView.attachTo(mTabWidget);
 
         BorderView borderView2 = new BorderView(this);
 
-         borderView2.setBackgroundResource(R.drawable.border_white_light_10);
+         borderView2.setBackgroundResource(org.evilbinary.tv.lib.R.drawable.border_white_light_10);
         borderView2.attachTo(mViewPager);
 
     }

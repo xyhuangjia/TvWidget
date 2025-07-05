@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.2"
+    namespace "org.evilbinary.tv.lib"
+    compileSdkVersion 33
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 19
+        minSdkVersion 19
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -24,8 +25,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.+'
-    compile 'com.android.support:cardview-v7:22+'
-    compile 'com.android.support:recyclerview-v7:22+'
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile 'com.android.support:appcompat-v7:22.+'
+//    compile 'com.android.support:cardview-v7:22+'
+//    compile 'com.android.support:recyclerview-v7:22+'
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.13.2'
+    compileOnly("androidx.cardview:cardview:1.0.0")
+    compileOnly("androidx.appcompat:appcompat:1.4.0")
+    compileOnly 'androidx.recyclerview:recyclerview:1.2.0'
+    compileOnly('androidx.gridlayout:gridlayout:1.0.0')
 }

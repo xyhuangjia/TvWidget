@@ -9,7 +9,7 @@ import android.widget.GridView;
  * 邮箱:rootdebug@163.com
  */
 public class TvGridView extends GridView {
-    private int position=0;
+    private int position = 0;
 
     public TvGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -20,19 +20,20 @@ public class TvGridView extends GridView {
     protected void setChildrenDrawingOrderEnabled(boolean enabled) {
         super.setChildrenDrawingOrderEnabled(enabled);
     }
+
     @Override
     protected int getChildDrawingOrder(int childCount, int i) {
         position = getSelectedItemPosition() - getFirstVisiblePosition();
-        if(position<0){
+        if (position < 0) {
             return i;
-        }else{
-            if(i == childCount - 1){
-                if(position>i){
-                    position=i;
+        } else {
+            if (i == childCount - 1) {
+                if (position > i) {
+                    position = i;
                 }
                 return position;
             }
-            if(i == position){
+            if (i == position) {
                 return childCount - 1;
             }
         }
