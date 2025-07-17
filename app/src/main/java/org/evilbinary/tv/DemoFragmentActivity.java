@@ -18,8 +18,6 @@ public class DemoFragmentActivity extends Activity{
         Fragment fragment=new MyFragment();
         getFragmentManager().beginTransaction().replace(R.id.fragment,fragment).commit();
 
-
-
     }
 
 

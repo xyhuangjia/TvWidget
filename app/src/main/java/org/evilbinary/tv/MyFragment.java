@@ -2,13 +2,14 @@ package org.evilbinary.tv;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+
+import androidx.annotation.Nullable;
 
 import org.evilbinary.tv.widget.BorderView;
 
@@ -30,7 +31,7 @@ public class MyFragment extends Fragment {
         gridView.setAdapter(myAdapter);
         myAdapter.notifyDataSetChanged();
 
-         gridView.setSelection(0);
+        gridView.setSelection(0);
         gridView.setSelected(false);
         gridView.setFocusable(false);
 

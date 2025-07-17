@@ -58,7 +58,7 @@
 
     </TabWidget>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:focusable="true"
         android:layout_gravity="center"
         android:id="@+id/viewPager1"
